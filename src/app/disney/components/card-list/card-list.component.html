@@ -1,0 +1,30 @@
+<div class="character-card" *ngFor="let character of disney">
+  <div class="card mb-2 text-center bg-dark">
+    <!-- CREAR IMAGEN PERSONAJE -->
+
+    <div class="card">
+      <img
+        class="card-img-top card-img"
+        src="{{ character.imageUrl }}"
+        alt="{{ character.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          <strong>Name:</strong> {{ character.name }}
+          <br />
+          <strong>ID:</strong> {{ character._id }}
+        </h5>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+          aspernatur.
+        </p>
+      </div>
+      <div class="card-footer bg-dark">
+        <small class="text-white"
+          >Fecha de última actualización<br />
+          {{ character.updatedAt | date }}</small
+        >
+      </div>
+    </div>
+  </div>
+</div>
